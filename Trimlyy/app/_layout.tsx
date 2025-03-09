@@ -1,7 +1,9 @@
-import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useEffect, useState } from "react";
+import { View, ActivityIndicator } from "react-native";
+import Splash from "./splash";
+import { Stack, Slot } from 'expo-router';
 
 import "./globals.css";
 
@@ -23,14 +25,31 @@ export default function RootLayout() {
   useEffect(() => {
     async function prepareApp() {
       if (fontsLoaded) {
-        setAppReady(true);
-        await SplashScreen.hideAsync(); // ✅ Hide splash screen only when ready
+        setTimeout(async () => {
+          setAppReady(true);
+          await SplashScreen.hideAsync(); // ✅ Hide splash screen when everything is ready
+        }, 2000); // Wait 2s for a smooth transition
       }
     }
     prepareApp();
   }, [fontsLoaded]);
 
-  if (!appReady) return null; // Prevent rendering before everything loads
+  if (!appReady) return <Splash />; // ✅ Show animated splash while loading
 
-  return <Stack screenOptions={{ headerShown: false}}/>;
+  // Return Slot instead of Stack in the root layout
+  return <Slot />;
+}
+
+// Move this to app/(root)/_layout.tsx instead
+export function TabsLayout() {
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        animation: 'slide_from_right',
+        animationDuration: 200,
+        gestureEnabled: true,
+      }}
+    />
+  );
 }

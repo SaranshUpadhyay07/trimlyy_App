@@ -32,6 +32,7 @@ import wifi from "@/assets/icons/wifi.png";
 import location from "@/assets/icons/location.png";
 import edit from "@/assets/icons/edit.png";
 import cart from "@/assets/icons/shopping-cart.png";
+import coupon from "@/assets/icons/coupons.png";
 
 export default {
   google,
@@ -42,6 +43,7 @@ export default {
   filter,
   star,
   heart,
+  coupon,
   backArrow,
   calendar,
   info,

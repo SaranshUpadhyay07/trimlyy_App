@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/logo.png",
         "backgroundColor": "#e0ad6c"
-      }
+      },
+      "package": "com.saransh11.Trimlyy"
     },
     "web": {
       "bundler": "metro",
@@ -29,7 +30,8 @@
         {
           "image": "./assets/images/logo.png",
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#ffffff",
+          "preventAutoHide": true
         }
       ],
       "expo-font"
@@ -37,10 +39,18 @@
     "splash": {
       "image": "./assets/images/logo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#70543c"
     },
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8752e0a3-8ce6-4c00-a47c-4444aa861b6b"
+      }
     }
   }
 }

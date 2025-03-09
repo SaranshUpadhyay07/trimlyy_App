@@ -12,7 +12,7 @@ const Explore = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   return (
-    <SafeAreaView className="h-full bg-white">
+    <SafeAreaView className="bg-[#f8f4eb] h-full">
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 32, paddingHorizontal: 7 }}

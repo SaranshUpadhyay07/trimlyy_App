@@ -36,7 +36,7 @@ const Profile = () => {
   };
 
   return (
-    <SafeAreaView className="h-full bg-white">
+    <SafeAreaView className="bg-[#f8f4eb] h-full">
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 32, paddingHorizontal: 7 }}>
         {/* Header */}
         <View className="flex flex-row items-center justify-between mt-5">
