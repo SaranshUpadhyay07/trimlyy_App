@@ -70,14 +70,21 @@ export default function Index() {
         </View>
 
         {/* Regular Cards Section */}
+        {/* Recommended for you Section */}
         <View className="mt-6 px-4">
           <Text className="text-lg font-rubik-bold text-black-300 mb-3">
-            Popular Services
+            Recommended for you
           </Text>
-          <View className="flex flex-col gap-4">
-            <Card />
-            <Card />
-            <Card />
+          <View className="flex flex-row flex-wrap justify-between">
+            <View className="w-[48%]">
+              <Card />
+            </View>
+            <View className="w-[48%]">
+              <Card />
+            </View>
+            <View className="w-[48%]">
+              <Card />
+            </View> 
           </View>
         </View>
       </ScrollView>

@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   couponCode: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#d35400",
+    color: "#c7914c",
   },
   discount: {
     fontSize: 16,
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   backButton: {
     marginTop: 20,
     padding: 12,
-    backgroundColor: "#d35400",
+    backgroundColor: "#59380c",
     borderRadius: 10,
     alignItems: "center",
   },

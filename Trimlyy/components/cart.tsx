@@ -2,7 +2,7 @@ import { View, Text, FlatList, StyleSheet, TouchableOpacity, Image } from "react
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
-
+import {router} from 'expo-router';
 const cartItems = [
   { id: "1", name: "Beef Burger", price: "₹399", quantity: 1, image: require("@/assets/images/map.png") },
   { id: "2", name: "Beef Burger", price: "₹399", quantity: 1, image: require("@/assets/images/map.png") },
@@ -75,8 +75,9 @@ export default function CartScreen() {
       </View>
 
       <TouchableOpacity 
-        style={styles.checkoutButton}
-        onPress={() => navigation.navigate("Checkout")}
+          style={styles.checkoutButton}
+          className="flex flex-col items-center"
+          onPress={() => router.push('/checkout')}
       >
         <Text style={styles.checkoutText}>Checkout</Text>
       </TouchableOpacity>
@@ -199,7 +200,7 @@ const styles = StyleSheet.create({
   },
   checkoutButton: {
     padding: 18,
-    backgroundColor: "#FF8C00",
+    backgroundColor: "#59380c",
     borderRadius: 15,
     alignItems: "center",
   },
