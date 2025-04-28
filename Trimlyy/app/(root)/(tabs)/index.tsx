@@ -35,7 +35,7 @@ export default function Index() {
               >
                 <Image source={icons.cart} className="size-6" />
                 <Text className="text-base font-rubik-medium text-black-300">
-                  Cart
+                  Services
                 </Text>
               </TouchableOpacity>
 
